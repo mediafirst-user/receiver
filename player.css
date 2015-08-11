@@ -699,6 +699,10 @@ body {
 }
 
 .player[state="idle"] .logo {
+  display: none;
+}
+
+.player[state="launching"] .logo {
   display: block;
 }
 
