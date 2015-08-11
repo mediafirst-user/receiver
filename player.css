@@ -711,7 +711,6 @@ body {
 
 .player[state="idle"] .logo {
   display: block;
-  background-image: url(assets/end.jpg);
 }
 
 .player[state="launching"] .logoend {
