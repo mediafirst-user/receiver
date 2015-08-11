@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2602ac0b-3abb-4a7f-8bc7-6a62f82a2991" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.css" afterPath="$PROJECT_DIR$/player.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.html" afterPath="$PROJECT_DIR$/player.html" />
     </list>
     <ignored path="receiver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/player.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-14.833333">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -36,8 +37,8 @@
       <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5403088">
-              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.38250428">
+              <caret line="716" column="35" selection-start-line="716" selection-start-column="35" selection-end-line="716" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -386,15 +387,15 @@
     <entry file="file://$PROJECT_DIR$/player.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.833333">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5403088">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.38250428">
+          <caret line="716" column="35" selection-start-line="716" selection-start-column="35" selection-end-line="716" selection-end-column="35" />
           <folding />
         </state>
       </provider>
