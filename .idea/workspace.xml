@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2602ac0b-3abb-4a7f-8bc7-6a62f82a2991" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/black.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/buffering.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/done.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/ericsson_logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/homepagebckgrnd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/output2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/paused.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/placeholder-audio.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/playing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assests/watermark.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.css" afterPath="$PROJECT_DIR$/player.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="receiver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +36,8 @@
       <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.018092">
-              <caret line="351" column="48" selection-start-line="351" selection-start-column="48" selection-end-line="351" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.48026314">
+              <caret line="251" column="21" selection-start-line="251" selection-start-column="21" selection-end-line="251" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -137,6 +124,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="receiver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="receiver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="receiver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.018092">
-          <caret line="351" column="48" selection-start-line="351" selection-start-column="48" selection-end-line="351" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.48026314">
+          <caret line="251" column="21" selection-start-line="251" selection-start-column="21" selection-end-line="251" selection-end-column="21" />
           <folding />
         </state>
       </provider>
