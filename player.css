@@ -62,7 +62,7 @@ body {
   position: absolute;
   bottom: 50%;
   left: 25%;
-  background-image: url(ericsson_logo.gif);
+  background-image: url(output2.gif);
   margin-bottom: -96px;
   margin-left: -96px;
   width: 900px;
@@ -243,7 +243,7 @@ body {
 }
 
 .player .preview-mode-artwork {
-  background-image: url(ericsson_logo.gif);
+  background-image: url(output2.gif);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -309,7 +309,7 @@ body {
 
 .player[type="video"][state="launching"] .logo {
   display: block;
-  background-image: url(ericsson_logo.gif)
+  background-image: url(output2.gif)
 }
 
 .player[type="video"][state="launching"] .controls,
