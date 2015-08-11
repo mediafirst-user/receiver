@@ -699,7 +699,7 @@ body {
 }
 
 .player[state="idle"] .logo {
-  display: block;
+  display: none;
 }
 
 .player[state="idle"] .spinner {
