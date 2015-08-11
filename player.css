@@ -36,7 +36,7 @@
 /* ------------------------------------------------- */
 
 body {
- color: black;
+ background-color: #000;
 }
 
 .player {
@@ -699,7 +699,8 @@ body {
 }
 
 .player[state="idle"] .logo {
-  display: none;
+  display: block;
+  background-image: url(assets/end.jpg);
 }
 
 .player[state="launching"] .logo {
