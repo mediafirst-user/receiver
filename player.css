@@ -711,11 +711,7 @@ body {
 }
 
 .player[state="idle"] .logo {
-  display: block;
-}
-
-.player[state="launching"] .logoend {
-  display: block;
+  display: none;
 }
 
 .player[state="idle"] .spinner {
