@@ -31,6 +31,11 @@
   100% { margin-left: 100%; }
 }
 
+@-webkit-keyframes move {
+  0% {left: 0%;}
+  75% {left:100%;}
+  100% {left:100%;}
+}
 /* ------------------------------------------------- */
 /* Player                                            */
 /* ------------------------------------------------- */
@@ -362,7 +367,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 
 .player[type="video"][state="loading"] .controls-progress-inner {
   width: 90% !important;
-  -webkit-animation: loading 2s infinite linear;
+  -webkit-animation: move 4s infinite cubic-bezier(.2,.64,.81,.23);
 }
 
 /* ------------------------------------------------- */
