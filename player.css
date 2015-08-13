@@ -94,7 +94,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   position: absolute;
-  bottom: 75%;
+  bottom: 50%;
   left: 50%;
   background-image: url(assets/singlebarlogo.jpg);
   margin-bottom: -96px;
@@ -113,19 +113,13 @@ body {
       -webkit-animation-iteration-count: infinite;
       -webkit-animation-name: blink;
       -webkit-animation-timing-function: ease-in-out;
-
-      -moz-animation-direction: normal;
-      -moz-animation-duration: 2s;
-      -moz-animation-iteration-count: infinite;
-      -moz-animation-name: blink;
-      -moz-animation-timing-function: ease-in-out;
       animation-delay: 0.33s
   /*
   background-image: url(assets/output2.gif);
   margin-left: auto;
   margin-right: auto*/
 }
-
+/*
 .player .logobar2 {
   display: none;
   background-size: contain;
@@ -150,13 +144,6 @@ body {
       -webkit-animation-iteration-count: infinite;
       -webkit-animation-name: blink;
       -webkit-animation-timing-function: ease-in-out;
-
-      -moz-animation-direction: normal;
-      -moz-animation-duration: 2s;
-      -moz-animation-iteration-count: infinite;
-      -moz-animation-name: blink;
-      -moz-animation-timing-function: ease-in-out;
-
       animation-delay: 0.66s;
   /*
   background-image: url(assets/output2.gif);
@@ -188,19 +175,12 @@ body {
       -webkit-animation-iteration-count: infinite;
       -webkit-animation-name: blink;
       -webkit-animation-timing-function: ease-in-out;
-
-      -moz-animation-direction: normal;
-      -moz-animation-duration: 2s;
-      -moz-animation-iteration-count: infinite;
-      -moz-animation-name: blink;
-      -moz-animation-timing-function: ease-in-out;
-
       animation-delay: 0.99s;
   /*
   background-image: url(assets/output2.gif);
   margin-left: auto;
   margin-right: auto*/
-}
+}*/
 
 .player .logoend {
   display: none;
