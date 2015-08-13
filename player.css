@@ -46,11 +46,11 @@ body {
 
 .player {
 background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
-  background-image: url("");
+  /*background-image: url("");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*color: #f1f1f1;*/
+  color: #f1f1f1;*/
   font-family: 'Open Sans',sans-serif;
   font-weight: 300;
   position: absolute;
@@ -71,8 +71,8 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   background-image: url(assets/output2.gif);
   margin-bottom: -96px;
   margin-left: -96px;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   /*
   background-image: url(assets/output2.gif);
   margin-left: auto;
