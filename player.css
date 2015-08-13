@@ -334,11 +334,6 @@ body {
   display: block;
 }
 
-.player[type="video"][state="launching"] .logo {
-  /*display: block;
-  background-image: url(assets/output2.gif)*/
-}
-
 .player[type="video"][state="launching"] .controls,
 .player[type="video"][state="launching"] .media-info,
 .player[type="video"][state="launching"] .media-artwork {

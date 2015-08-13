@@ -610,6 +610,10 @@ sampleplayer.CastPlayer.prototype.preloadVideo_ = function(mediaInformation) {
  * @export
  */
 sampleplayer.CastPlayer.prototype.load = function(info) {
+
+    setTimeout(function(){
+      //your code to be executed after 1 seconds
+    }, 3000);
   this.log_('onLoad_');
   clearTimeout(this.idleTimerId_);
   var self = this;
