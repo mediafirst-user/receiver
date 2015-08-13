@@ -36,6 +36,25 @@
   75% {left:100%;}
   100% {left:100%;}
 }
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    20% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    80% {
+        opacity:1;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
 /* ------------------------------------------------- */
 /* Player                                            */
 /* ------------------------------------------------- */
@@ -69,7 +88,45 @@ body {
   bottom: 0;
 }
 
-.player .logo {
+.player .logobar1 {
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  background-image: url(assets/singlebarlogo.jpg);
+  margin-bottom: -96px;
+  margin-left: -96px;
+  width: 200px;
+  height: 200px;
+
+  -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+
+      -webkit-animation-direction: normal;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: blink;
+      -webkit-animation-timing-function: ease-in-out;
+
+      -moz-animation-direction: normal;
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-name: blink;
+      -moz-animation-timing-function: ease-in-out;
+      animation-delay: 0.33s
+  /*
+  background-image: url(assets/output2.gif);
+  margin-left: auto;
+  margin-right: auto*/
+}
+
+.player .logobar2 {
   display: none;
   background-size: contain;
   background-repeat: no-repeat;
@@ -82,6 +139,63 @@ body {
   margin-left: -96px;
   width: 200px;
   height: 200px;
+  -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+
+      -webkit-animation-direction: normal;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: blink;
+      -webkit-animation-timing-function: ease-in-out;
+
+      -moz-animation-direction: normal;
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-name: blink;
+      -moz-animation-timing-function: ease-in-out;
+
+      animation-delay: 0.66s;
+  /*
+  background-image: url(assets/output2.gif);
+  margin-left: auto;
+  margin-right: auto*/
+}
+
+.player .logobar3 {
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  background-image: url(assets/singlebarlogo.jpg);
+  margin-bottom: -96px;
+  margin-left: -96px;
+  width: 200px;
+  height: 200px;
+  -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+
+      -webkit-animation-direction: normal;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: blink;
+      -webkit-animation-timing-function: ease-in-out;
+
+      -moz-animation-direction: normal;
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-name: blink;
+      -moz-animation-timing-function: ease-in-out;
+
+      animation-delay: 0.99s;
   /*
   background-image: url(assets/output2.gif);
   margin-left: auto;
@@ -98,6 +212,64 @@ body {
 .player .placeholder-image {
   background-image: url("assets/placeholder-audio.jpg");
 }
+
+/* ------------------------------------------------- */
+/* Player continued.. Play/Pause Postage UI                                            */
+/* ------------------------------------------------- */
+.player .playPostage{
+  display:none;
+}
+
+.player .regularPausePostage {
+  position : absolute;
+  bottom : 250px;
+  left: 30px:
+  width: 450px;
+  height: 300px;
+  /*Set background color to faded black*/
+  background-rgb: rgb(0,0,0,0.5);
+}
+
+/* Delayed pause over 15secs */
+.player .delayedPausePostage {
+  position : absolute;
+  top: 0;
+  bottom : 0;
+  left: 0:
+  right: 0;
+}
+
+.player .regularPausePostage > #artwork {
+  left: 5px;
+  top: 6px;
+  width: 100px
+  height: 250px;
+  background-image: url(batmanposter.jpg);
+
+.player .delayedPausePostage > #artwork {
+  top: 0;
+  bottom : 0;
+  left: 0:
+  right: 0;
+    /*Set background-image in .js*/
+}
+
+.player .regularPausePostage > #text {
+  left: 80px;
+  top: 20px;
+  width: 100px
+  height: 250px;
+  /*Set background-image in .js*/
+
+.player .delayedPausePostage > #text {
+  top: 20;
+  left: 30%:
+    /*Set background-image in .js*/
+}
+
+/* ------------------------------------------------- */
+/* Player continued..                                       */
+/* ------------------------------------------------- */
 
 .player .gradient {
   position: absolute;
@@ -334,6 +506,16 @@ body {
   display: block;
 }
 
+.player[type="video"][state="launching"] .logobar1 {
+  display: block;
+}
+.player[type="video"][state="launching"] .logobar2 {
+  display: block;
+}
+.player[type="video"][state="launching"] .logobar3 {
+  display: block;
+}
+
 .player[type="video"][state="launching"] .controls,
 .player[type="video"][state="launching"] .media-info,
 .player[type="video"][state="launching"] .media-artwork {
@@ -357,6 +539,7 @@ body {
 /* ------------------------------------------------- */
 
 .player[type="video"][state="loading"] .overlay,
+.player[type="video"][state="loading"] .regularPausePostage,
 .player[type="video"][state="loading"] .controls,
 .player[type="video"][state="loading"] .watermark {
   display: block;
@@ -428,6 +611,7 @@ body {
 /* ------------------------------------------------- */
 
 .player[type="video"][state="paused"] .overlay,
+.player[type="video"][state="paused"] .regularPausePostage,
 .player[type="video"][state="paused"] .gradient,
 .player[type="video"][state="paused"] .watermark {
   display: block;
