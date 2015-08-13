@@ -254,10 +254,8 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
-//  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-  setTimeout(this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance(),5000);
-  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this),5000);
-//  this.receiverManager_.onReady = this.onReady_.bind(this);
+  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+  this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
   this.receiverManager_.onVisibilityChanged =
@@ -424,7 +422,7 @@ sampleplayer.MEDIA_INFO_DURATION_ = 3 * 1000;
  *
  * @const @private {number}
  */
-sampleplayer.TRANSITION_DURATION_ = 0.5;
+sampleplayer.TRANSITION_DURATION_ = 2.0;
 
 
 /**
