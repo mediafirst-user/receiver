@@ -68,7 +68,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   position: absolute;
   bottom: 50%;
   left: 50%;
-  background-image: url(assets/singlebarlogo.jpg);
+  background-image: url(assets/output2.png);
   margin-bottom: -96px;
   margin-left: -96px;
   width: 400px;
@@ -327,7 +327,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 
 .player[type="video"][state="launching"] .logo {
   display: block;
-  background-image: url(singlebarlogo.jpg)
+  background-image: url(assets/output2.png)
 }
 
 .player[type="video"][state="launching"] .controls,
