@@ -1419,7 +1419,7 @@ sampleplayer.CastPlayer.prototype.onStop_ = function(event) {
  */
 sampleplayer.CastPlayer.prototype.onEnded_ = function() {
   this.log_('onEnded');
-  this.setState_(sampleplayer.State.IDLE, true);
+  this.setState_(sampleplayer.State.DONE, true);
   this.hidePreviewMode_();
 };
 
@@ -1431,7 +1431,7 @@ sampleplayer.CastPlayer.prototype.onEnded_ = function() {
  */
 sampleplayer.CastPlayer.prototype.onAbort_ = function() {
   this.log_('onAbort');
-  this.setState_(sampleplayer.State.IDLE, true);
+  this.setState_(sampleplayer.State.DONE, true);
   this.hidePreviewMode_();
 };
 
