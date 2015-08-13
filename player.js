@@ -422,7 +422,7 @@ sampleplayer.MEDIA_INFO_DURATION_ = 3 * 1000;
  *
  * @const @private {number}
  */
-sampleplayer.TRANSITION_DURATION_ = 1.5;
+sampleplayer.TRANSITION_DURATION_ = 0.5;
 
 
 /**
