@@ -613,66 +613,70 @@ sampleplayer.CastPlayer.prototype.load = function(info) {
 
     setTimeout(function(){
       //your code to be executed after 1 seconds
-    }, 3000);
-  this.log_('onLoad_');
-  clearTimeout(this.idleTimerId_);
-  var self = this;
-  var media = info.message.media || {};
-  var contentType = media.contentType;
-  var playerType = sampleplayer.getType_(media);
-  var isLiveStream = media.streamType === cast.receiver.media.StreamType.LIVE;
-  if (!media.contentId) {
-    this.log_('Load failed: no content');
-    self.onLoadMetadataError_(info);
-  } else if (playerType === sampleplayer.Type.UNKNOWN) {
-    this.log_('Load failed: unknown content type: ' + contentType);
-    self.onLoadMetadataError_(info);
-  } else {
-    this.log_('Loading: ' + playerType);
-    self.resetMediaElement_();
-    self.setType_(playerType, isLiveStream);
-    var preloaded = false;
-    switch (playerType) {
-      case sampleplayer.Type.AUDIO:
-        self.loadAudio_(info);
-        break;
-      case sampleplayer.Type.VIDEO:
-        preloaded = self.loadVideo_(info);
-        break;
-    }
-    self.playerReady_ = false;
-    self.metadataLoaded_ = false;
-    self.loadMetadata_(media);
-    self.showPreviewModeMetadata(false);
-    self.displayPreviewMode_ = false;
-    sampleplayer.preload_(media, function() {
-      self.log_('preloaded=' + preloaded);
-      if (preloaded) {
-        // Data is ready to play so transiton directly to playing.
-        self.setState_(sampleplayer.State.PLAYING, false);
-        self.playerReady_ = true;
-        self.maybeSendLoadCompleted_(info);
-        // Don't display metadata again, since autoplay already did that.
-        self.deferPlay_(0);
-        self.playerAutoPlay_ = false;
-      } else {
-        sampleplayer.transition_(self.element_, sampleplayer.TRANSITION_DURATION_, function() {
-          self.setState_(sampleplayer.State.LOADING, false);
-          // Only send load completed after we reach this point so the media
-          // manager state is still loading and the sender can't send any PLAY
-          // messages
-          self.playerReady_ = true;
-          self.maybeSendLoadCompleted_(info);
-          if (self.playerAutoPlay_) {
-            // Make sure media info is displayed long enough before playback
-            // starts.
-            self.deferPlay_(sampleplayer.MEDIA_INFO_DURATION_);
-            self.playerAutoPlay_ = false;
+      this.log_('onLoad_');
+        clearTimeout(this.idleTimerId_);
+        var self = this;
+        var media = info.message.media || {};
+        var contentType = media.contentType;
+        var playerType = sampleplayer.getType_(media);
+        var isLiveStream = media.streamType === cast.receiver.media.StreamType.LIVE;
+        if (!media.contentId) {
+          this.log_('Load failed: no content');
+          self.onLoadMetadataError_(info);
+        } else if (playerType === sampleplayer.Type.UNKNOWN) {
+          this.log_('Load failed: unknown content type: ' + contentType);
+          self.onLoadMetadataError_(info);
+        } else {
+          this.log_('Loading: ' + playerType);
+          self.resetMediaElement_();
+          self.setType_(playerType, isLiveStream);
+          var preloaded = false;
+          switch (playerType) {
+            case sampleplayer.Type.AUDIO:
+              self.loadAudio_(info);
+              break;
+            case sampleplayer.Type.VIDEO:
+              preloaded = self.loadVideo_(info);
+              break;
           }
-        });
-      }
-    });
-  }
+          self.playerReady_ = false;
+          self.metadataLoaded_ = false;
+          self.loadMetadata_(media);
+          self.showPreviewModeMetadata(false);
+          self.displayPreviewMode_ = false;
+          sampleplayer.preload_(media, function() {
+            self.log_('preloaded=' + preloaded);
+            if (preloaded) {
+              // Data is ready to play so transiton directly to playing.
+              self.setState_(sampleplayer.State.PLAYING, false);
+              self.playerReady_ = true;
+              self.maybeSendLoadCompleted_(info);
+              // Don't display metadata again, since autoplay already did that.
+              self.deferPlay_(0);
+              self.playerAutoPlay_ = false;
+            } else {
+              sampleplayer.transition_(self.element_, sampleplayer.TRANSITION_DURATION_, function() {
+                self.setState_(sampleplayer.State.LOADING, false);
+                // Only send load completed after we reach this point so the media
+                // manager state is still loading and the sender can't send any PLAY
+                // messages
+                self.playerReady_ = true;
+                self.maybeSendLoadCompleted_(info);
+                if (self.playerAutoPlay_) {
+                  // Make sure media info is displayed long enough before playback
+                  // starts.
+                  self.deferPlay_(sampleplayer.MEDIA_INFO_DURATION_);
+                  self.playerAutoPlay_ = false;
+                }
+              });
+            }
+          });
+        }
+
+
+      //end here
+    }, 3000);
+
 };
 
 /**
