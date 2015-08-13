@@ -1275,6 +1275,11 @@ sampleplayer.CastPlayer.prototype.updateApplicationState_ = function() {
 sampleplayer.CastPlayer.prototype.onReady_ = function() {
   this.log_('onReady');
   this.setState_(sampleplayer.State.IDLE, false);
+  var delay=3000; //1 seconds
+
+  setTimeout(function(){
+    //your code to be executed after 1 seconds
+  }, delay);
 };
 
 
