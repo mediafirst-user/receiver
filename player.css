@@ -488,7 +488,7 @@ body {
 
 .player[type="video"][state="launching"] .logobar1 {
   display: block;
-  background-image: url(assets/singlebarlogo.jpg);
+  background-image: url(singlebarlogo.jpg);
   background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
