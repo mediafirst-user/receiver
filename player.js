@@ -1275,7 +1275,7 @@ sampleplayer.CastPlayer.prototype.updateApplicationState_ = function() {
  * @private
  */
 sampleplayer.CastPlayer.prototype.onReady_ = function() {
-  this.setTimeout(this.log_('onReady'),3000);
+  setTimeout(this.log_('onReady'),3000);
   console.log("in on ready set timeout");
 
   this.setState_(sampleplayer.State.IDLE, false);
