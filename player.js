@@ -1567,11 +1567,12 @@ sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
 setTimeout(function(){
       //your code to be executed after 1 seconds
       this.cancelDeferredPlay_('new media is loaded');
+      this.load(new cast.receiver.MediaManager.LoadInfo(
+            /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+            event.senderId));
     }, 3000);
 
-  this.load(new cast.receiver.MediaManager.LoadInfo(
-      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-      event.senderId));
+
 };
 
 
