@@ -1564,17 +1564,24 @@ sampleplayer.CastPlayer.prototype.onCancelPreload_ = function(event) {
 sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
   this.log_('onLoad_');
 
-  window.setTimeout(function(){
-      //your code to be executed after 1 seconds
+//  window.setTimeout(function(){
+//      //your code to be executed after 1 seconds
+//
+//      this.cancelDeferredPlay_('new media is loaded');
+//    }, 10000);
 
-      this.cancelDeferredPlay_('new media is loaded');
-    }, 3000);
+ this.addDelay_(3000);
 
  this.load(new cast.receiver.MediaManager.LoadInfo(
             /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
             event.senderId));
 };
 
+
+sampleplayer.CastPlayer.prototype.addDelay_ = function(x) {
+
+  setTimeout(this.cancelDeferredPlay_('new media is loaded'),x);
+}
 
 /**
  * Called when we receive a EDIT_TRACKS_INFO message.
@@ -1638,7 +1645,6 @@ sampleplayer.CastPlayer.prototype.onMetadataLoaded_ = function(info) {
   this.maybeSendLoadCompleted_(info);
 };
 
-
 /**
  * Called when the media could not be successfully loaded. Transitions to
  * IDLE state and calls the original media manager implementation.
@@ -1657,7 +1663,6 @@ sampleplayer.CastPlayer.prototype.onLoadMetadataError_ = function(event) {
         self.onLoadMetadataErrorOrig_(event);
       });
 };
-
 
 /**
  * Cancels deferred playback.
