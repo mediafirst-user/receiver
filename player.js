@@ -1580,7 +1580,7 @@ sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
 
 sampleplayer.CastPlayer.prototype.addDelay_ = function(x) {
 
-  setTimeout(function(){this.cancelDeferredPlay_('new media is loaded');},x);
+  setTimeout(function(){console.log("in timeout")},x);
 }
 
 /**
