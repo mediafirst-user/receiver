@@ -327,7 +327,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 
 .player[type="video"][state="launching"] .logo {
   display: block;
-  background-image: url(output2.gif)
+  background-image: url(EricssonSingleBarLogo.jpg)
 }
 
 .player[type="video"][state="launching"] .controls,
