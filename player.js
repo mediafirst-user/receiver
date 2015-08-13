@@ -255,7 +255,8 @@ sampleplayer.CastPlayer = function(element) {
    * @private {!cast.receiver.CastReceiverManager}
    */
   this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-  this.receiverManager_.onReady = this.onReady_.bind(this);
+  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this),1000);
+//  this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
   this.receiverManager_.onVisibilityChanged =
@@ -1275,10 +1276,8 @@ sampleplayer.CastPlayer.prototype.updateApplicationState_ = function() {
  * @private
  */
 sampleplayer.CastPlayer.prototype.onReady_ = function() {
-  setTimeout(this.log_('onReady'),3000);
-  console.log("in on ready set timeout");
-setTimeout(this.setState_(sampleplayer.State.IDLE, false),3000);
-//  this.setState_(sampleplayer.State.IDLE, false);
+  this.log_('onReady');
+  this.setState_(sampleplayer.State.IDLE, false);
 };
 
 
