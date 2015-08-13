@@ -61,15 +61,24 @@
 
 body {
    background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%); /* Chrome 10+, Saf5.1+ */
+   width: 100%;
+     height: 100%;
+      background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
 }
 
 .player {
-background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
-  background-image: url("");
+
+  /*background-image: url("");
+  background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*color: #f1f1f1;*/
+  color: #f1f1f1;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   font-family: 'Open Sans',sans-serif;
   font-weight: 300;
   position: absolute;
@@ -125,7 +134,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   position: absolute;
   bottom: 50%;
   left: 50%;
-  background-image: url(assets/singlebarlogo.jpg);
+  background-image: url(assets/output2.gif);
   margin-bottom: -96px;
   margin-left: -96px;
   width: 200px;
@@ -913,4 +922,9 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 
 .player[state="done"] {
   background-image: url(assets/end.jpg);
+  width: 100%;
+       height: 100%;
+        background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
 }
