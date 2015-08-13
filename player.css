@@ -491,7 +491,6 @@ body {
   background-image: url(singlebarlogo.jpg);
   background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -500,7 +499,7 @@ body {
     width: 50px;
     height: 50px;
 
-    -webkit-transition: all 1s ease-in-out;
+    /*-webkit-transition: all 1s ease-in-out;
         -moz-transition: all 1s ease-in-out;
         -o-transition: all 1s ease-in-out;
         -ms-transition: all 1s ease-in-out;
@@ -511,7 +510,7 @@ body {
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-name: blink;
         -webkit-animation-timing-function: ease-in-out;
-        animation-delay: 0.33s
+        animation-delay: 0.33s*/
 }
 /*.player[type="video"][state="launching"] .logobar2 {
   display: block;
