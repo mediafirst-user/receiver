@@ -50,8 +50,9 @@ body {
 }
 
 .player {
-background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
+
   /*background-image: url("");
+  background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,8 +80,8 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   background-image: url(assets/output2.gif);
   margin-bottom: -96px;
   margin-left: -96px;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   /*
   background-image: url(assets/output2.gif);
   margin-left: auto;
