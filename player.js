@@ -652,7 +652,7 @@ sampleplayer.CastPlayer.prototype.load = function(info) {
         self.deferPlay_(0);
         self.playerAutoPlay_ = false;
       } else {
-        sampleplayer.transition_(self.element_, 4.0, function() {
+        sampleplayer.transition_(self.element_, sampleplayer.TRANSITION_DURATION_, function() {
           self.setState_(sampleplayer.State.LOADING, false);
           // Only send load completed after we reach this point so the media
           // manager state is still loading and the sender can't send any PLAY
