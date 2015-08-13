@@ -1572,15 +1572,15 @@ sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
  this.cancelDeferredPlay_('new media is loaded');
  this.addDelay_(3000);
 
-
+ this.load(new cast.receiver.MediaManager.LoadInfo(
+            /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+            event.senderId));
 };
 
 
 sampleplayer.CastPlayer.prototype.addDelay_ = function(x) {
 
-  setTimeout(function(){this.load(new cast.receiver.MediaManager.LoadInfo(
-                                    /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-                                    event.senderId))},x);
+  setTimeout(function(){this.cancelDeferredPlay_('new media is loaded')},x);
 }
 
 /**
