@@ -1570,7 +1570,7 @@ sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
 //      this.cancelDeferredPlay_('new media is loaded');
 //    }, 10000);
  this.cancelDeferredPlay_('new media is loaded');
- this.addDelay_(3000);
+ this.addDelay_(10000);
 
  this.load(new cast.receiver.MediaManager.LoadInfo(
             /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
