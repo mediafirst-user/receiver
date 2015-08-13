@@ -254,9 +254,9 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
-  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this),1000);
-//  this.receiverManager_.onReady = this.onReady_.bind(this);
+//  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+  setTimeout(this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance(),3000);
+  this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
   this.receiverManager_.onVisibilityChanged =
