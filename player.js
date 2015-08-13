@@ -255,6 +255,7 @@ sampleplayer.CastPlayer = function(element) {
    * @private {!cast.receiver.CastReceiverManager}
    */
 //  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+  setTimeout(console.log("start screen delay"),3000);
   setTimeout(this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance(),3000);
   this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
