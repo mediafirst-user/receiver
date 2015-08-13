@@ -333,6 +333,7 @@ sampleplayer.IDLE_TIMEOUT = {
   LAUNCHING: 1000 * 60 * 5, // 5 minutes
   LOADING: 1000 * 60 * 5,  // 5 minutes
   PAUSED: 1000 * 60 * 20,  // 20 minutes
+  DELAYEDPAUSE: 1000 * 60 * 15,  // 15 minutes
   DONE: 1000 * 60 * 5,     // 5 minutes
   IDLE: 1000 * 60 * 5      // 5 minutes
 };
@@ -397,6 +398,7 @@ sampleplayer.State = {
   BUFFERING: 'buffering',
   PLAYING: 'playing',
   PAUSED: 'paused',
+  DELAYEDPAUSE: 'delayedpause',
   DONE: 'done',
   IDLE: 'idle'
 };
@@ -1365,6 +1367,9 @@ sampleplayer.CastPlayer.prototype.onPause_ = function() {
     this.mediaManager_.broadcastStatus(/* includeMedia */ false);
   } else if (!isIdle && !isDone) {
     this.setState_(sampleplayer.State.PAUSED, false);
+    /*var artwork = document.getElementById('artwork');
+    artwork.style.backgroundImage = url(batmanposter.jpg);*/
+    document.getElementById('postage').className = "regularPausePostage";
   }
   this.updateProgress_();
 };
