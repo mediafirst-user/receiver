@@ -325,10 +325,10 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   display: block;
 }
 
-.player[type="video"][state="launching"] .logo {
+/*.player[type="video"][state="launching"] .logo {
   display: block;
   background-image: url(assets/output2.gif)
-}
+}*/
 
 .player[type="video"][state="launching"] .controls,
 .player[type="video"][state="launching"] .media-info,
