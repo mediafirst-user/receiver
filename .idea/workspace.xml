@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2602ac0b-3abb-4a7f-8bc7-6a62f82a2991" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.css" afterPath="$PROJECT_DIR$/player.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.js" afterPath="$PROJECT_DIR$/player.js" />
     </list>
     <ignored path="receiver.iws" />
@@ -36,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="player.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57894737">
+            <state vertical-scroll-proportion="-13.037037">
               <caret line="330" column="3" selection-start-line="330" selection-start-column="3" selection-end-line="330" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="player.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-267.94232">
-              <caret line="1570" column="50" selection-start-line="1570" selection-start-column="50" selection-end-line="1570" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.48885077">
+              <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -70,8 +69,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/player.html" />
-        <option value="$PROJECT_DIR$/player.js" />
         <option value="$PROJECT_DIR$/player.css" />
+        <option value="$PROJECT_DIR$/player.js" />
       </list>
     </option>
   </component>
@@ -479,6 +478,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.037037">
+          <caret line="330" column="3" selection-start-line="330" selection-start-column="3" selection-end-line="330" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/player.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.208334">
@@ -491,16 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-267.94232">
-          <caret line="1570" column="50" selection-start-line="1570" selection-start-column="50" selection-end-line="1570" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57894737">
-          <caret line="330" column="3" selection-start-line="330" selection-start-column="3" selection-end-line="330" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.48885077">
+          <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
           <folding />
         </state>
       </provider>
