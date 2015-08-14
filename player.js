@@ -255,8 +255,8 @@ sampleplayer.CastPlayer = function(element) {
    * @private {!cast.receiver.CastReceiverManager}
    */
   this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this), 3000);
-  //this.receiverManager_.onReady = this.onReady_.bind(this);
+//  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this), 3000);
+  this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
   this.receiverManager_.onVisibilityChanged =
@@ -499,7 +499,7 @@ sampleplayer.CastPlayer.prototype.getPlayer = function() {
  * @export
  */
 sampleplayer.CastPlayer.prototype.start = function() {
-  this.receiverManager_.start();
+  setTimeout(function(){this.receiverManager_.start()},4000);
 };
 
 
