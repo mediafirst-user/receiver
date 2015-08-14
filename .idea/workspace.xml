@@ -26,8 +26,8 @@
       <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6545453">
-              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+            <state vertical-scroll-proportion="-3.2545455">
+              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -38,8 +38,8 @@
       <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75189394">
-              <caret line="103" column="2" selection-start-line="103" selection-start-column="2" selection-end-line="103" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.46212122">
+              <caret line="904" column="32" selection-start-line="904" selection-start-column="32" selection-end-line="904" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -506,8 +506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6545453">
-          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+        <state vertical-scroll-proportion="-3.2545455">
+          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -516,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75189394">
-          <caret line="103" column="2" selection-start-line="103" selection-start-column="2" selection-end-line="103" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.46212122">
+          <caret line="904" column="32" selection-start-line="904" selection-start-column="32" selection-end-line="904" selection-end-column="32" />
           <folding />
         </state>
       </provider>
