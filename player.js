@@ -499,7 +499,7 @@ sampleplayer.CastPlayer.prototype.getPlayer = function() {
  * @export
  */
 sampleplayer.CastPlayer.prototype.start = function() {
-  setTimeout(this.receiverManager_.start(),4000);
+  this.receiverManager_.start();
 };
 
 
@@ -612,7 +612,7 @@ sampleplayer.CastPlayer.prototype.preloadVideo_ = function(mediaInformation) {
  */
 sampleplayer.CastPlayer.prototype.load = function(info) {
   this.log_('onLoad_');
-  clearTimeout(this.idleTimerId_);
+  //clearTimeout(this.idleTimerId_);
   var self = this;
   var media = info.message.media || {};
   var contentType = media.contentType;
