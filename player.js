@@ -276,37 +276,12 @@ sampleplayer.CastPlayer = function(element) {
    * @private {?function(cast.receiver.MediaManager.Event)}
    */
 
-var ud=new UselessDelay();
-ud.start();//Will show 'Why was I delayed?' after 1 second
-
-function UselessDelay()
-{
-    this.message='Why was I delayed?';
-}
-
-UselessDelay.prototype.start=function()
-{
-    window.setTimeout(this.show.bind(this),4000);
-}
-
-UselessDelay.prototype.show=function()
-{
-    console.log(this.message);
-    // this.onLoadOrig_ = setTimeout(function(){
-    //           this.mediaManager_.onLoad();}.bind(this.mediaManager_), 4000);
-      this.onLoadOrig_ =
-         this.mediaManager_.onLoad.bind(this.mediaManager_);
-      this.mediaManager_.onLoad = this.onLoad_.bind(this);
-    //  setTimeout(function(){
-    //  this.mediaManager_.onLoad = this.onLoad_.bind(this), 4000);
-};
-
-
-// this.onLoadOrig_ = setTimeout(function(){
-//           this.mediaManager_.onLoad();}.bind(this.mediaManager_), 4000);
+ var that = this;
+ this.onLoadOrig_ = setTimeout(function(){
+           that.mediaManager_.onLoad.bind(that.mediaManager_)}, 4000);
 //  this.onLoadOrig_ =
 //     this.mediaManager_.onLoad.bind(this.mediaManager_);
-//  this.mediaManager_.onLoad = this.onLoad_.bind(this);
+  this.mediaManager_.onLoad = this.onLoad_.bind(this);
 //  setTimeout(function(){
 //  this.mediaManager_.onLoad = this.onLoad_.bind(this), 4000);
 
