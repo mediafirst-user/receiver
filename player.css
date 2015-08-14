@@ -255,6 +255,7 @@ body {
   min-width: 96px;
   max-width: 266px;
   width: 100%;
+  background-color: red;
 }
 
 .player .media-text {
@@ -482,7 +483,7 @@ body {
 .player[type="video"][state="launching"] .controls,
 .player[type="video"][state="launching"] .media-info,
 .player[type="video"][state="launching"] .media-artwork {
-  display: none;
+  /*display: none;*/
 }
 
 .player[type="video"][state="launching"] .spinner {
