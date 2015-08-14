@@ -1414,7 +1414,7 @@ sampleplayer.CastPlayer.prototype.onStop_ = function(event) {
   var self = this;
   sampleplayer.transition_(self.element_, sampleplayer.TRANSITION_DURATION_,
       function() {
-        self.setState_(sampleplayer.State.IDLE, false);
+        self.setState_(sampleplayer.State.IDLE, false, 4000);
         self.onStopOrig_(event);
       });
 };
