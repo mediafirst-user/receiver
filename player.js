@@ -275,11 +275,14 @@ sampleplayer.CastPlayer = function(element) {
    * The original load callback.
    * @private {?function(cast.receiver.MediaManager.Event)}
    */
-  this.onLoadOrig_ =
-      this.mediaManager_.onLoad.bind(this.mediaManager_);
-  //this.mediaManager_.onLoad = this.onLoad_.bind(this);
-  setTimeout(function(){
-  this.mediaManager_.onLoad = this.onLoad_.bind(this);}, 4000);
+   setTimeout(function(){
+     this.onLoadOrig_ =
+           this.mediaManager_.onLoad.bind(this.mediaManager_);}, 4000);
+//  this.onLoadOrig_ =
+//      this.mediaManager_.onLoad.bind(this.mediaManager_);
+  this.mediaManager_.onLoad = this.onLoad_.bind(this);
+//  setTimeout(function(){
+//  this.mediaManager_.onLoad = this.onLoad_.bind(this);}, 4000);
 
 
   /**
