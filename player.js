@@ -1413,25 +1413,25 @@ sampleplayer.CastPlayer.prototype.onStop_ = function(event) {
 
 
 /**
- * Called when media has ended. We transition to the IDLE state.
+ * Called when media has ended. We transition to the DONE {previously IDLE} state.
  *
  * @private
  */
 sampleplayer.CastPlayer.prototype.onEnded_ = function() {
   this.log_('onEnded');
-  this.setState_(sampleplayer.State.IDLE, true);
+  this.setState_(sampleplayer.State.DONE, true);
   this.hidePreviewMode_();
 };
 
 
 /**
- * Called when media has been aborted. We transition to the IDLE state.
+ * Called when media has been aborted. We transition to the DONE {previously IDLE} state.
  *
  * @private
  */
 sampleplayer.CastPlayer.prototype.onAbort_ = function() {
   this.log_('onAbort');
-  this.setState_(sampleplayer.State.IDLE, true);
+  this.setState_(sampleplayer.State.DONE, true);
   this.hidePreviewMode_();
 };
 
