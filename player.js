@@ -499,7 +499,7 @@ sampleplayer.CastPlayer.prototype.getPlayer = function() {
  * @export
  */
 sampleplayer.CastPlayer.prototype.start = function() {
-  setTimeout(function(){this.receiverManager_.start()},4000);
+  setTimeout(this.receiverManager_.start(),4000);
 };
 
 
