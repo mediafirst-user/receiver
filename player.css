@@ -95,11 +95,12 @@ body {
          background-position: bottom;
           position: absolute;
           bottom: 50%;
-          left: 25%;
+          left: 50%;
           margin-bottom: -96px;
           margin-left: -96px;
           width: 50px;
           height: 50px;
+          display:none;
 /*
   -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
@@ -488,19 +489,6 @@ body {
 .player[type="video"][state="launching"] .logobar1 {
   display: block;
   background-image: url(singlebarlogo.jpg);
-
-    /*-webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
-
-        -webkit-animation-direction: normal;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-name: blink;
-        -webkit-animation-timing-function: ease-in-out;
-        animation-delay: 0.33s*/
 }
 /*.player[type="video"][state="launching"] .logobar2 {
   display: block;
@@ -537,6 +525,9 @@ body {
 .player[type="video"][state="loading"] .controls,
 .player[type="video"][state="loading"] .watermark {
   display: block;
+}
+.player[type="video"][state="loading"] .logobar1 {
+  display: none;
 }
 
 .player[type="video"][state="loading"] .controls-cur-time,
@@ -660,13 +651,11 @@ body {
 /* ------------------------------------------------- */
 
 .player[type="video"][state="playing"] .overlay,
+.player[type="video"][state="playing"] .logobar1,
 .player[type="video"][state="playing"] .gradient,
 .player[type="video"][state="playing"] .watermark {
   display: block;
   visibility: hidden;
-}
-.player[type="video"][state="playing"] .logobar1 {
-  display: none;
 }
 
 .player[type="video"][state="playing"].seeking .overlay,
@@ -902,7 +891,7 @@ body {
 }
 
 .player[state="idle"] .logobar1 {
-  display: block;
+  display: none;
 }
 
 .player[state="idle"] .spinner {
