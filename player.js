@@ -1281,7 +1281,7 @@ sampleplayer.CastPlayer.prototype.updateApplicationState_ = function() {
  */
 sampleplayer.CastPlayer.prototype.onReady_ = function() {
   this.log_('onReady');
-  this.setState_(sampleplayer.State.IDLE, false);
+  this.setState_(sampleplayer.State.IDLE, false, 4000);
 };
 
 
