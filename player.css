@@ -89,18 +89,18 @@ body {
 }
 
 .player .logobar1 {
-display:none;
-}
+        display:none;
         background-image: url(singlebarlogo.jpg);
         background-size: contain;
           background-repeat: no-repeat;
+         background-position: bottom;
           position: absolute;
           bottom: 50%;
-          left: 50%;
+          left: 25%;
           margin-bottom: -96px;
           margin-left: -96px;
-          width: 50px;
-          height: 50px;
+          width: 500px;
+          height: 500px;
 /*
   -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
@@ -488,16 +488,6 @@ display:none;
 
 .player[type="video"][state="launching"] .logobar1 {
   display: block;
-  background-image: url(singlebarlogo.jpg);
-  background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    margin-bottom: -96px;
-    margin-left: -96px;
-    width: 50px;
-    height: 50px;
 
     /*-webkit-transition: all 1s ease-in-out;
         -moz-transition: all 1s ease-in-out;
@@ -765,7 +755,7 @@ display:none;
 /* Player - Audio - Launching                        */
 /* ------------------------------------------------- */
 
-.player[type="audio"][state="launching"] .logo {
+.player[type="audio"][state="launching"] .logobar1 {
   display: block;
 }
 
@@ -908,7 +898,7 @@ display:none;
   display: none;
 }
 
-.player[state="idle"] .logo {
+.player[state="idle"] .logobar1 {
   display: block;
 }
 
