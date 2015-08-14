@@ -276,10 +276,10 @@ sampleplayer.CastPlayer = function(element) {
    * @private {?function(cast.receiver.MediaManager.Event)}
    */
 
- this.onLoadOrig_ = setTimeout(
-           this.mediaManager_.onLoad.bind(this.mediaManager_), 4000);
-//  this.onLoadOrig_ =
-//      this.mediaManager_.onLoad.bind(this.mediaManager_);
+// this.onLoadOrig_ = setTimeout(
+//           this.mediaManager_.onLoad.bind(this.mediaManager_), 4000);
+  this.onLoadOrig_ =
+     this.mediaManager_.onLoad.bind(this.mediaManager_);
   this.mediaManager_.onLoad = this.onLoad_.bind(this);
 //  setTimeout(function(){
 //  this.mediaManager_.onLoad = this.onLoad_.bind(this);}, 4000);
