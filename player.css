@@ -89,18 +89,16 @@ body {
 }
 
 .player .logobar1 {
-    display: none;
-    background-image: url(singlebarlogo.jpg);
-    background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute;
-      bottom: 50%;
-      left: 50%;
-      margin-bottom: -96px;
-      margin-left: -96px;
-      width: 200px;
-      height: 200px;
-
+        background-image: url(singlebarlogo.jpg);
+        background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          bottom: 50%;
+          left: 50%;
+          margin-bottom: -96px;
+          margin-left: -96px;
+          width: 50px;
+          height: 50px;
 /*
   -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
@@ -496,8 +494,8 @@ body {
     left: 50%;
     margin-bottom: -96px;
     margin-left: -96px;
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
 
     /*-webkit-transition: all 1s ease-in-out;
         -moz-transition: all 1s ease-in-out;
@@ -671,6 +669,7 @@ body {
 
 .player[type="video"][state="playing"] .overlay,
 .player[type="video"][state="playing"] .gradient,
+.player[type="video"][state="playing"] .logobar1,
 .player[type="video"][state="playing"] .watermark {
   display: block;
   visibility: hidden;

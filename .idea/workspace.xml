@@ -38,8 +38,8 @@
       <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.719697">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5814394">
+              <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.448277">
-              <caret line="2074" column="2" selection-start-line="2074" selection-start-column="2" selection-end-line="2074" selection-end-column="2" />
+            <state vertical-scroll-proportion="-9.413794">
+              <caret line="2116" column="69" selection-start-line="2116" selection-start-column="69" selection-end-line="2116" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -498,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.448277">
-          <caret line="2074" column="2" selection-start-line="2074" selection-start-column="2" selection-end-line="2074" selection-end-column="2" />
+        <state vertical-scroll-proportion="-9.413794">
+          <caret line="2116" column="69" selection-start-line="2116" selection-start-column="69" selection-end-line="2116" selection-end-column="69" />
           <folding />
         </state>
       </provider>
@@ -516,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.719697">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5814394">
+          <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
           <folding />
         </state>
       </provider>
