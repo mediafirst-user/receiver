@@ -89,6 +89,8 @@ body {
 }
 
 .player .logobar1 {
+display:none;
+}
         background-image: url(singlebarlogo.jpg);
         background-size: contain;
           background-repeat: no-repeat;
@@ -669,7 +671,6 @@ body {
 
 .player[type="video"][state="playing"] .overlay,
 .player[type="video"][state="playing"] .gradient,
-.player[type="video"][state="playing"] .logobar1,
 .player[type="video"][state="playing"] .watermark {
   display: block;
   visibility: hidden;
