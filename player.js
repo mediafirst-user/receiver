@@ -111,7 +111,7 @@ sampleplayer.CastPlayer = function(element) {
    */
   this.lastStateTransitionTime_ = 0;
 
-  this.setState_(sampleplayer.State.IDLE, false, 4000);
+  this.setState_(sampleplayer.State.IDLE, true, 4000);
 
   /**
    * The id returned by setInterval for the screen burn timer
