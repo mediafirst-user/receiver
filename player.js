@@ -280,9 +280,9 @@ sampleplayer.CastPlayer = function(element) {
 //           this.mediaManager_.onLoad.bind(this.mediaManager_), 4000);
   this.onLoadOrig_ =
      this.mediaManager_.onLoad.bind(this.mediaManager_);
-  this.mediaManager_.onLoad = this.onLoad_.bind(this);
-//  setTimeout(function(){
-//  this.mediaManager_.onLoad = this.onLoad_.bind(this);}, 4000);
+  //this.mediaManager_.onLoad = this.onLoad_.bind(this);
+  setTimeout(function(){
+  this.mediaManager_.onLoad = this.onLoad_.bind(this);}, 4000);
 
 
   /**
@@ -1414,7 +1414,7 @@ sampleplayer.CastPlayer.prototype.onStop_ = function(event) {
   var self = this;
   sampleplayer.transition_(self.element_, sampleplayer.TRANSITION_DURATION_,
       function() {
-        self.setState_(sampleplayer.State.IDLE, false, 4000);
+        self.setState_(sampleplayer.State.IDLE, false);
         self.onStopOrig_(event);
       });
 };
