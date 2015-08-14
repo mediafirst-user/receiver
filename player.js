@@ -111,7 +111,7 @@ sampleplayer.CastPlayer = function(element) {
    */
   this.lastStateTransitionTime_ = 0;
 
-  this.setState_(sampleplayer.State.LAUNCHING, false);
+  this.setState_(sampleplayer.State.IDLE, false);
 
   /**
    * The id returned by setInterval for the screen burn timer
@@ -255,6 +255,7 @@ sampleplayer.CastPlayer = function(element) {
    * @private {!cast.receiver.CastReceiverManager}
    */
   this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+//  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this), 3000);
   this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
@@ -274,9 +275,15 @@ sampleplayer.CastPlayer = function(element) {
    * The original load callback.
    * @private {?function(cast.receiver.MediaManager.Event)}
    */
+
+// this.onLoadOrig_ = setTimeout(
+//           this.mediaManager_.onLoad.bind(this.mediaManager_), 4000);
   this.onLoadOrig_ =
-      this.mediaManager_.onLoad.bind(this.mediaManager_);
+     this.mediaManager_.onLoad.bind(this.mediaManager_);
   this.mediaManager_.onLoad = this.onLoad_.bind(this);
+//  setTimeout(function(){
+//  this.mediaManager_.onLoad = this.onLoad_.bind(this);}, 4000);
+
 
   /**
    * The original editTracksInfo callback
@@ -333,7 +340,6 @@ sampleplayer.IDLE_TIMEOUT = {
   LAUNCHING: 1000 * 60 * 5, // 5 minutes
   LOADING: 1000 * 60 * 5,  // 5 minutes
   PAUSED: 1000 * 60 * 20,  // 20 minutes
-  DELAYEDPAUSE: 1000 * 60 * 15,  // 15 minutes
   DONE: 1000 * 60 * 5,     // 5 minutes
   IDLE: 1000 * 60 * 5      // 5 minutes
 };
@@ -398,7 +404,6 @@ sampleplayer.State = {
   BUFFERING: 'buffering',
   PLAYING: 'playing',
   PAUSED: 'paused',
-  DELAYEDPAUSE: 'delayedpause',
   DONE: 'done',
   IDLE: 'idle'
 };
@@ -424,7 +429,7 @@ sampleplayer.MEDIA_INFO_DURATION_ = 3 * 1000;
  *
  * @const @private {number}
  */
-sampleplayer.TRANSITION_DURATION_ = 2.0;
+sampleplayer.TRANSITION_DURATION_ = 1.0;
 
 
 /**
@@ -612,8 +617,6 @@ sampleplayer.CastPlayer.prototype.preloadVideo_ = function(mediaInformation) {
  * @export
  */
 sampleplayer.CastPlayer.prototype.load = function(info) {
-
-
   this.log_('onLoad_');
   clearTimeout(this.idleTimerId_);
   var self = this;
@@ -1278,7 +1281,8 @@ sampleplayer.CastPlayer.prototype.updateApplicationState_ = function() {
  */
 sampleplayer.CastPlayer.prototype.onReady_ = function() {
   this.log_('onReady');
-  this.setState_(sampleplayer.State.IDLE, false);
+  //this.setState_(sampleplayer.State.LAUNCHING, false);
+  this.setState_(sampleplayer.State.IDLE, false, 4000);
 };
 
 
@@ -1369,9 +1373,6 @@ sampleplayer.CastPlayer.prototype.onPause_ = function() {
     this.mediaManager_.broadcastStatus(/* includeMedia */ false);
   } else if (!isIdle && !isDone) {
     this.setState_(sampleplayer.State.PAUSED, false);
-    /*var artwork = document.getElementById('artwork');
-    artwork.style.backgroundImage = url(batmanposter.jpg);*/
-    document.getElementById('postage').className = "regularPausePostage";
   }
   this.updateProgress_();
 };
@@ -1413,14 +1414,14 @@ sampleplayer.CastPlayer.prototype.onStop_ = function(event) {
   var self = this;
   sampleplayer.transition_(self.element_, sampleplayer.TRANSITION_DURATION_,
       function() {
-        self.setState_(sampleplayer.State.IDLE, false);
+        self.setState_(sampleplayer.State.IDLE, false, 4000);
         self.onStopOrig_(event);
       });
 };
 
 
 /**
- * Called when media has ended. We transition to the DONE{earlier IDLE} state.
+ * Called when media has ended. We transition to the DONE {previously IDLE} state.
  *
  * @private
  */
@@ -1432,7 +1433,7 @@ sampleplayer.CastPlayer.prototype.onEnded_ = function() {
 
 
 /**
- * Called when media has been aborted. We transition to the DONE{earlier IDLE} state.
+ * Called when media has been aborted. We transition to the DONE {previously IDLE} state.
  *
  * @private
  */
@@ -1568,25 +1569,13 @@ sampleplayer.CastPlayer.prototype.onCancelPreload_ = function(event) {
  */
 sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
   this.log_('onLoad_');
-
-//  window.setTimeout(function(){
-//      //your code to be executed after 1 seconds
-//
-//      this.cancelDeferredPlay_('new media is loaded');
-//    }, 10000);
- this.cancelDeferredPlay_('new media is loaded');
- this.addDelay_(10000);
-
- this.load(new cast.receiver.MediaManager.LoadInfo(
-            /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-            event.senderId));
+  this.cancelDeferredPlay_('new media is loaded');
+  setTimeout(console.log("before onload"), 4000);
+  this.load(new cast.receiver.MediaManager.LoadInfo(
+      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+      event.senderId));
 };
 
-
-sampleplayer.CastPlayer.prototype.addDelay_ = function(x) {
-
-  setTimeout(function(){console.log("in timeout")},x);
-}
 
 /**
  * Called when we receive a EDIT_TRACKS_INFO message.
@@ -1650,6 +1639,7 @@ sampleplayer.CastPlayer.prototype.onMetadataLoaded_ = function(info) {
   this.maybeSendLoadCompleted_(info);
 };
 
+
 /**
  * Called when the media could not be successfully loaded. Transitions to
  * IDLE state and calls the original media manager implementation.
@@ -1668,6 +1658,7 @@ sampleplayer.CastPlayer.prototype.onLoadMetadataError_ = function(event) {
         self.onLoadMetadataErrorOrig_(event);
       });
 };
+
 
 /**
  * Cancels deferred playback.
