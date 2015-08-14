@@ -276,7 +276,7 @@ sampleplayer.CastPlayer = function(element) {
    * @private {?function(cast.receiver.MediaManager.Event)}
    */
 
-     this.onLoadOrig_ = setTimeout(
+ this.onLoadOrig_ = setTimeout(
            this.mediaManager_.onLoad.bind(this.mediaManager_), 4000);
 //  this.onLoadOrig_ =
 //      this.mediaManager_.onLoad.bind(this.mediaManager_);
@@ -618,7 +618,7 @@ sampleplayer.CastPlayer.prototype.preloadVideo_ = function(mediaInformation) {
  */
 sampleplayer.CastPlayer.prototype.load = function(info) {
   this.log_('onLoad_');
-  //clearTimeout(this.idleTimerId_);
+  clearTimeout(this.idleTimerId_);
   var self = this;
   var media = info.message.media || {};
   var contentType = media.contentType;
@@ -1574,7 +1574,7 @@ sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
 //        /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
 //        event.senderId));
 //  }, 4000);
-
+  setTimeout(console.log("before onload"), 4000);
   this.load(new cast.receiver.MediaManager.LoadInfo(
       /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
       event.senderId));
