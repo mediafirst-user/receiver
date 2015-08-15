@@ -277,10 +277,15 @@ sampleplayer.CastPlayer = function(element) {
    */
 
 
+sampleplayer.CastPlayer.prototype.ssb_ = function(t) {
+  setTimeout(console.log(""), t);
+};
+
 // var that = this;
 // this.onLoadOrig_ = setTimeout(function(){
 //           that.mediaManager_.onLoad.bind(that.mediaManager_)}, 4000);
-  yield to.sleep(4000);
+
+  var dd = sampleplayer.CastPlayer.prototype.ssb_(4000);
   this.onLoadOrig_ =
      this.mediaManager_.onLoad.bind(this.mediaManager_);
   this.mediaManager_.onLoad = this.onLoad_.bind(this);
