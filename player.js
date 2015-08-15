@@ -1572,7 +1572,7 @@ sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
   setTimeout(function(){
   that.load(new cast.receiver.MediaManager.LoadInfo(
                    /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-                   event.senderId))}, 4000);
+                   event.senderId));}, 4000);
 //  this.load(new cast.receiver.MediaManager.LoadInfo(
 //      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
 //      event.senderId));
