@@ -276,10 +276,6 @@ sampleplayer.CastPlayer = function(element) {
    * @private {?function(cast.receiver.MediaManager.Event)}
    */
 
-// var that = this;
- this.onLoadOrig_ = setTimeout(function(){
-           this === this.mediaManager_.onLoad()}.bind(this), 4000);
-
   this.onLoadOrig_ =
      this.mediaManager_.onLoad.bind(this.mediaManager_);
   this.mediaManager_.onLoad = this.onLoad_.bind(this);
@@ -1572,10 +1568,13 @@ sampleplayer.CastPlayer.prototype.onCancelPreload_ = function(event) {
 sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
   this.log_('onLoad_');
   this.cancelDeferredPlay_('new media is loaded');
-  setTimeout(console.log("before onload"), 4000);
+  setTimeout(function(){
   this.load(new cast.receiver.MediaManager.LoadInfo(
-      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-      event.senderId));
+                   /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+                   event.senderId))}, 4000);
+//  this.load(new cast.receiver.MediaManager.LoadInfo(
+//      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+//      event.senderId));
 };
 
 
