@@ -1568,8 +1568,9 @@ sampleplayer.CastPlayer.prototype.onCancelPreload_ = function(event) {
 sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
   this.log_('onLoad_');
   this.cancelDeferredPlay_('new media is loaded');
-  setTimeout(()=>
-  this.load(new cast.receiver.MediaManager.LoadInfo(
+  var that = this;
+  setTimeout(
+  that.load(new cast.receiver.MediaManager.LoadInfo(
                    /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
                    event.senderId)), 4000);
 //  this.load(new cast.receiver.MediaManager.LoadInfo(
