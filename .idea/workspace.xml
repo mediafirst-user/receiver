@@ -49,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/player.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2813036">
-              <caret line="257" column="104" selection-start-line="257" selection-start-column="104" selection-end-line="257" selection-end-column="104" />
+              <caret line="257" column="100" selection-start-line="257" selection-start-column="100" selection-end-line="257" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -528,7 +528,7 @@
     <entry file="file://$PROJECT_DIR$/player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2813036">
-          <caret line="257" column="104" selection-start-line="257" selection-start-column="104" selection-end-line="257" selection-end-column="104" />
+          <caret line="257" column="100" selection-start-line="257" selection-start-column="100" selection-end-line="257" selection-end-column="100" />
           <folding />
         </state>
       </provider>
