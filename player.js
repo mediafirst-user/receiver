@@ -2036,7 +2036,8 @@ sampleplayer.getApplicationState_ = function(opt_media) {
   } else if (opt_media) {
     return 'Now Casting';
   } else {
-    return 'Ready To Cast';
+  return 'ssb';
+//    return 'Ready To Cast';
   }
 };
 
