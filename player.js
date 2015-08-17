@@ -255,7 +255,10 @@ sampleplayer.CastPlayer = function(element) {
    * @private {!cast.receiver.CastReceiverManager}
    */
 //  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-  this.receiverManager_ = setTimeout(function() {cast.receiver.CastReceiverManager.getInstance();}, 3000);
+  setTimeout(function() {
+  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+  }, 3000);
+
 //  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this), 3000);
   this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
@@ -1573,14 +1576,14 @@ sampleplayer.CastPlayer.prototype.onCancelPreload_ = function(event) {
 sampleplayer.CastPlayer.prototype.onLoad_ = function(event) {
   this.log_('onLoad_');
   this.cancelDeferredPlay_('new media is loaded');
-  var that = this;
-  setTimeout(
-  that.load(new cast.receiver.MediaManager.LoadInfo(
-                   /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-                   event.senderId)), 6000);
-//  this.load(new cast.receiver.MediaManager.LoadInfo(
-//      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
-//      event.senderId));
+//  var that = this;
+//  setTimeout(
+//  that.load(new cast.receiver.MediaManager.LoadInfo(
+//                   /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+//                   event.senderId)), 6000);
+  this.load(new cast.receiver.MediaManager.LoadInfo(
+      /** @type {!cast.receiver.MediaManager.LoadRequestData} */ (event.data),
+      event.senderId));
 };
 
 
