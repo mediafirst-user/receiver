@@ -265,7 +265,7 @@ sampleplayer.CastPlayer = function(element) {
 //  this.receiverManager_.setApplicationState(
 //      sampleplayer.getApplicationState_());
 
-  setTimeout(function(){rManager = cast.receiver.CastReceiverManager.getInstance()},3000);
+  setTimeout(function(){rManager = cast.receiver.CastReceiverManager.getInstance();},3000);
   rManager.onReady = this.onReady_.bind(this);
   rManager.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
