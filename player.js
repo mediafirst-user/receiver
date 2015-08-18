@@ -75,7 +75,6 @@ var sampleplayer = sampleplayer || {};
  */
 sampleplayer.CastPlayer = function(element) {
 
- setTimeout(
   /**
    * The debug setting to control receiver, MPL and player logging.
    * @private {boolean}
@@ -255,7 +254,8 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
-  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+   var that = this;
+  this.receiverManager_ = setTimeout(cast.receiver.CastReceiverManager.getInstance(), 3000);
   this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
@@ -326,7 +326,6 @@ sampleplayer.CastPlayer = function(element) {
   this.mediaManager_.onPreload = this.onPreload_.bind(this);
   this.mediaManager_.onCancelPreload = this.onCancelPreload_.bind(this);
 
-  , 3000);
 };
 
 
