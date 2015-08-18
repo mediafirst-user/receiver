@@ -341,6 +341,17 @@ sampleplayer.CastPlayer = function(element) {
   this.mediaManager_.onPreload = this.onPreload_.bind(this);
   this.mediaManager_.onCancelPreload = this.onCancelPreload_.bind(this);
 
+  this.startReceiverManager = function(){
+      this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+      this.receiverManager_.onReady = this.onReady_.bind(this);
+      this.receiverManager_.onSenderDisconnected =
+          this.onSenderDisconnected_.bind(this);
+      this.receiverManager_.onVisibilityChanged =
+          this.onVisibilityChanged_.bind(this);
+      this.receiverManager_.setApplicationState(
+          sampleplayer.getApplicationState_());
+   }
+
 };
 
 
@@ -458,17 +469,6 @@ sampleplayer.ENABLE_DEBUG_ = true;
  */
 sampleplayer.DISABLE_DEBUG_ = false;
 
-sampleplayer.CastPlayer.prototype.startReceiverManager = function(){
-    this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-    this.receiverManager_.onReady = this.onReady_.bind(this);
-    this.receiverManager_.onSenderDisconnected =
-        this.onSenderDisconnected_.bind(this);
-    this.receiverManager_.onVisibilityChanged =
-        this.onVisibilityChanged_.bind(this);
-    this.receiverManager_.setApplicationState(
-        sampleplayer.getApplicationState_());
- }
-
 /**
  * Returns the element with the given class name
  *
@@ -477,8 +477,6 @@ sampleplayer.CastPlayer.prototype.startReceiverManager = function(){
  * @throws {Error} If given class cannot be found.
  * @private
  */
-
-
 sampleplayer.CastPlayer.prototype.getElementByClass_ = function(className) {
   var element = this.element_.querySelector(className);
   if (element) {
