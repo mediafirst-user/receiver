@@ -75,6 +75,7 @@ var sampleplayer = sampleplayer || {};
  */
 sampleplayer.CastPlayer = function(element) {
 
+ setTimeout(
   /**
    * The debug setting to control receiver, MPL and player logging.
    * @private {boolean}
@@ -254,13 +255,7 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
- this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-//var that = this;
-//  setTimeout(function() {
-//  that.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-//  }, 3000);
-
-//  setTimeout(this.receiverManager_.onReady = this.onReady_.bind(this), 3000);
+  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
   this.receiverManager_.onReady = this.onReady_.bind(this);
   this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
@@ -284,9 +279,6 @@ sampleplayer.CastPlayer = function(element) {
   this.onLoadOrig_ =
      this.mediaManager_.onLoad.bind(this.mediaManager_);
   this.mediaManager_.onLoad = this.onLoad_.bind(this);
-//  setTimeout(function(){
-//  this.mediaManager_.onLoad = this.onLoad_.bind(this), 4000);
-
 
   /**
    * The original editTracksInfo callback
@@ -333,6 +325,8 @@ sampleplayer.CastPlayer = function(element) {
 
   this.mediaManager_.onPreload = this.onPreload_.bind(this);
   this.mediaManager_.onCancelPreload = this.onCancelPreload_.bind(this);
+
+  , 3000);
 };
 
 
