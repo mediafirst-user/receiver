@@ -237,7 +237,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 .player .controls-cur-time,
 .player .controls-total-time {
   color: rgba(255, 255, 255, 1.0);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -288,7 +288,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 }
 
 .player .preview-mode-info .preview-mode-subtitle {
-  color: rgba(203, 203, 203, 0.8);
+  color: rgba(203, 203, 203, 0.9);
   font-size: 22px;
   overflow: hidden;
   width: 80%;
