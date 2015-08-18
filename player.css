@@ -67,12 +67,12 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
   background-position: bottom;
   position: absolute;
   bottom: 50%;
-  left: 50%;
+  left: 45%;
   background-image: url(assets/output2.gif);
   margin-bottom: -96px;
   margin-left: -96px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   /*
   background-image: url(assets/output2.gif);
   margin-left: auto;
@@ -288,7 +288,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 }
 
 .player .preview-mode-info .preview-mode-subtitle {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(203, 203, 203, 0.9);
   font-size: 22px;
   overflow: hidden;
   width: 80%;
