@@ -254,18 +254,29 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
-  var me = this;
-  setTimeout(function(){
-        me.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();}, 3000);
+//  this.startTimeout = function () {
+//      var self = this;
+//      this.timeout = setTimeout(function() {
+//         self.timeoutHandler();
+//      }, 1000);
+//  }
+
+
+  var self = this;
+  this.timeout = setTimeout (function(){
+    self.startReceiverManager();
+  },4000);
+
+
   //this.receiverManager_ = setTimeout(function(){cast.receiver.CastReceiverManager.getInstance();}, 3000);
   //this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-  this.receiverManager_.onReady = this.onReady_.bind(this);
-  this.receiverManager_.onSenderDisconnected =
-      this.onSenderDisconnected_.bind(this);
-  this.receiverManager_.onVisibilityChanged =
-      this.onVisibilityChanged_.bind(this);
-  this.receiverManager_.setApplicationState(
-      sampleplayer.getApplicationState_());
+//  this.receiverManager_.onReady = this.onReady_.bind(this);
+//  this.receiverManager_.onSenderDisconnected =
+//      this.onSenderDisconnected_.bind(this);
+//  this.receiverManager_.onVisibilityChanged =
+//      this.onVisibilityChanged_.bind(this);
+//  this.receiverManager_.setApplicationState(
+//      sampleplayer.getApplicationState_());
 
 
 
@@ -447,6 +458,16 @@ sampleplayer.ENABLE_DEBUG_ = true;
  */
 sampleplayer.DISABLE_DEBUG_ = false;
 
+sampleplayer.CastPlayer.prototype.startReceiverManager = function(){
+    this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+    this.receiverManager_.onReady = this.onReady_.bind(this);
+    this.receiverManager_.onSenderDisconnected =
+        this.onSenderDisconnected_.bind(this);
+    this.receiverManager_.onVisibilityChanged =
+        this.onVisibilityChanged_.bind(this);
+    this.receiverManager_.setApplicationState(
+        sampleplayer.getApplicationState_());
+ }
 
 /**
  * Returns the element with the given class name
@@ -456,6 +477,8 @@ sampleplayer.DISABLE_DEBUG_ = false;
  * @throws {Error} If given class cannot be found.
  * @private
  */
+
+
 sampleplayer.CastPlayer.prototype.getElementByClass_ = function(className) {
   var element = this.element_.querySelector(className);
   if (element) {
