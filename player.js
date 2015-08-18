@@ -254,29 +254,15 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
-//  this.startTimeout = function () {
-//      var self = this;
-//      this.timeout = setTimeout(function() {
-//         self.timeoutHandler();
-//      }, 1000);
-//  }
-
-
-  var self = this;
-  this.timeout = setTimeout (function(){
-    self.startReceiverManager();
-  },4000);
-
-
   //this.receiverManager_ = setTimeout(function(){cast.receiver.CastReceiverManager.getInstance();}, 3000);
-  //this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-//  this.receiverManager_.onReady = this.onReady_.bind(this);
-//  this.receiverManager_.onSenderDisconnected =
-//      this.onSenderDisconnected_.bind(this);
-//  this.receiverManager_.onVisibilityChanged =
-//      this.onVisibilityChanged_.bind(this);
-//  this.receiverManager_.setApplicationState(
-//      sampleplayer.getApplicationState_());
+  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+  this.receiverManager_.onReady = this.onReady_.bind(this);
+  this.receiverManager_.onSenderDisconnected =
+      this.onSenderDisconnected_.bind(this);
+  this.receiverManager_.onVisibilityChanged =
+      this.onVisibilityChanged_.bind(this);
+  this.receiverManager_.setApplicationState(
+      sampleplayer.getApplicationState_());
 
 
 
@@ -340,17 +326,6 @@ sampleplayer.CastPlayer = function(element) {
 
   this.mediaManager_.onPreload = this.onPreload_.bind(this);
   this.mediaManager_.onCancelPreload = this.onCancelPreload_.bind(this);
-
-  this.startReceiverManager = function(){
-      this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-      this.receiverManager_.onReady = this.onReady_.bind(this);
-      this.receiverManager_.onSenderDisconnected =
-          this.onSenderDisconnected_.bind(this);
-      this.receiverManager_.onVisibilityChanged =
-          this.onVisibilityChanged_.bind(this);
-      this.receiverManager_.setApplicationState(
-          sampleplayer.getApplicationState_());
-   }
 
 };
 
