@@ -254,24 +254,17 @@ sampleplayer.CastPlayer = function(element) {
    * The cast receiver manager.
    * @private {!cast.receiver.CastReceiverManager}
    */
-   var rManager = this.receiverManager_;
-//  this.receiverManager_ = setTimeout(function(){cast.receiver.CastReceiverManager.getInstance();}, 3000);
-//  this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
-//  this.receiverManager_.onReady = this.onReady_.bind(this);
-//  this.receiverManager_.onSenderDisconnected =
-//      this.onSenderDisconnected_.bind(this);
-//  this.receiverManager_.onVisibilityChanged =
-//      this.onVisibilityChanged_.bind(this);
-//  this.receiverManager_.setApplicationState(
-//      sampleplayer.getApplicationState_());
-
-  setTimeout(function(){rManager = cast.receiver.CastReceiverManager.getInstance();},3000);
-  rManager.onReady = this.onReady_.bind(this);
-  rManager.onSenderDisconnected =
+  var me = this;
+  setTimeout(function(){
+        me.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();}, 3000);
+  //this.receiverManager_ = setTimeout(function(){cast.receiver.CastReceiverManager.getInstance();}, 3000);
+  //this.receiverManager_ = cast.receiver.CastReceiverManager.getInstance();
+  this.receiverManager_.onReady = this.onReady_.bind(this);
+  this.receiverManager_.onSenderDisconnected =
       this.onSenderDisconnected_.bind(this);
-  rManager.onVisibilityChanged =
+  this.receiverManager_.onVisibilityChanged =
       this.onVisibilityChanged_.bind(this);
-  rManager.setApplicationState(
+  this.receiverManager_.setApplicationState(
       sampleplayer.getApplicationState_());
 
 
