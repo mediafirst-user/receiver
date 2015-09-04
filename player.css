@@ -265,7 +265,7 @@ background-image: url("assets/logo.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  align-self: center;
+  align-self: stretch;
   height: 143px;
   margin-right: 32px;
   min-width: 96px;
