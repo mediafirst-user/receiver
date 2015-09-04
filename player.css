@@ -271,6 +271,7 @@ background-image: url("assets/logo.png");
   min-width: 96px;
   max-width: 266px;
   width: 100%;
+  height: 100%;
 }
 
 .player .preview-mode-info .preview-mode-text {
