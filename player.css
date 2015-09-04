@@ -263,7 +263,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 .player .preview-mode-artwork {
 max-width:100%;
 max-height:100%;
-  
+position:relative;
 }
 
 .player .preview-mode-info .preview-mode-text {
