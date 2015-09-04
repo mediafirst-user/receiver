@@ -263,7 +263,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 .player .preview-mode-artwork {
 background-image: url("assets/logo.png");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   align-self: stretch;
   height: 143px;
