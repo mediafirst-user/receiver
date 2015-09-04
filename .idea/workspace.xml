@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2602ac0b-3abb-4a7f-8bc7-6a62f82a2991" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.css" afterPath="$PROJECT_DIR$/player.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/player.html" afterPath="$PROJECT_DIR$/player.html" />
     </list>
     <ignored path="receiver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="player.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.125">
-              <caret line="72" column="18" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.3778802">
+              <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -35,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="player.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62222224">
+            <state vertical-scroll-proportion="0.0">
               <caret line="269" column="21" selection-start-line="269" selection-start-column="21" selection-end-line="269" selection-end-column="21" />
               <folding />
             </state>
@@ -68,9 +68,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/player.html" />
         <option value="$PROJECT_DIR$/player.js" />
         <option value="$PROJECT_DIR$/player.css" />
+        <option value="$PROJECT_DIR$/player.html" />
       </list>
     </option>
   </component>
@@ -574,21 +574,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player.html">
+    <entry file="file://$PROJECT_DIR$/player.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.125">
-          <caret line="72" column="18" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="269" column="21" selection-start-line="269" selection-start-column="21" selection-end-line="269" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player.css">
+    <entry file="file://$PROJECT_DIR$/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62222224">
-          <caret line="269" column="21" selection-start-line="269" selection-start-column="21" selection-end-line="269" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="0.3778802">
+          <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
