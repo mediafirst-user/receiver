@@ -265,13 +265,13 @@ background-image: url("assets/logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  align-self: stretch;
-  /*height: 143px;*/
+  /*align-self: stretch;
+  height: 143px;
   margin-right: 32px;
   min-width: 96px;
   max-width: 266px;
   width: 100%;
-  height: 100%;
+  height: 100%;*/
 }
 
 .player .preview-mode-info .preview-mode-text {
