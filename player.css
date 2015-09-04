@@ -261,9 +261,16 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 }
 
 .player .preview-mode-artwork {
-max-width:100%;
-max-height:100%;
-position:relative;
+background-image: url("assets/logo.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  align-self: center;
+  height: 143px;
+  margin-right: 32px;
+  min-width: 96px;
+  max-width: 266px;
+  width: 100%;
 }
 
 .player .preview-mode-info .preview-mode-text {
