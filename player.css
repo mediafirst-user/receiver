@@ -116,7 +116,7 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%);
 
 .player .media-artwork {
   background-size: cover;
-  background-position: bottom;
+  background-position: center center;
   background-repeat: no-repeat;
   align-self: center;
   height: 143px;
