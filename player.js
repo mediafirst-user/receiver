@@ -718,9 +718,9 @@ sampleplayer.CastPlayer.prototype.loadMetadata_ = function(media) {
   if (!sampleplayer.isCastForAudioDevice_()) {
     var metadata = media.metadata || {};
     var titleElement = this.element_.querySelector('.media-title');
-    //sampleplayer.setInnerText_(titleElement, metadata.title);
-    sampleplayer.setInnerText_(titleElement, 'title: ' + metadata.title + ', subtitle: ' + metadata.subtitle);
-    
+    sampleplayer.setInnerText_(titleElement, metadata.title);
+    //sampleplayer.setInnerText_(titleElement, 'title: ' + metadata.title + ', subtitle: ' + metadata.subtitle);
+
     var subtitleElement = this.element_.querySelector('.media-subtitle');
     sampleplayer.setInnerText_(subtitleElement, metadata.subtitle);
 
